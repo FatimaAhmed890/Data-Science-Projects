@@ -33,7 +33,7 @@ def load_data():
 df = load_data()
 
 sorted_coin = sorted(df['coin_symbol'])
-selected_coin = col1.multiselect('Cryptocurrencies', sorted_coin, default=['AAVE', 'BTC', 'ETC', 'ETH'])
+selected_coin = col1.multiselect('Cryptocurrencies', sorted_coin, default=['AAVE', 'BTC', 'ETC', 'ETH', 'USDT', 'BNB', 'DOGE', 'SOL', 'LTC', 'LINK'])
 
 df_selected_coins = df[(df['coin_symbol'].isin(selected_coin))]
 if len(selected_coin) != 0:
